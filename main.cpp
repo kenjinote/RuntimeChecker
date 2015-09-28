@@ -11,7 +11,7 @@
 #include<shlwapi.h>
 #include"resource.h"
 
-TCHAR szClassName[] = TEXT("Window");
+TCHAR szClassName[] = TEXT("RuntimeChecker");
 
 struct RUNTIME_STRUCT
 {
@@ -84,8 +84,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	switch (msg)
 	{
 	case WM_CREATE:
-		hFont = CreateFont(18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, TEXT("メイリオ"));
-		CreateWindow(TEXT("BUTTON"), TEXT("更新(F5)"), WS_VISIBLE | WS_CHILD | WS_TABSTOP,
+		hFont = CreateFont(18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, TEXT("繝｡繧､繝ｪ繧ｪ"));
+		CreateWindow(TEXT("BUTTON"), TEXT("譖ｴ譁ｰ(F5)"), WS_VISIBLE | WS_CHILD | WS_TABSTOP,
 			128, 8, 64, 26, hWnd, (HMENU)ID_BUTTON1, ((LPCREATESTRUCT)lParam)->hInstance, 0);
 		SendDlgItemMessage(hWnd, ID_BUTTON1, WM_SETFONT, (WPARAM)hFont, 0);
 		SendMessage(hWnd, WM_RUNTIMECHECK, 0, 0);
@@ -181,7 +181,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR pCmdLine, int 
 
 	const HWND hWnd = CreateWindow(
 		szClassName,
-		TEXT("Visual C++ ランタイム チェッカー"),
+		TEXT("Visual C++ 繝ｩ繝ｳ繧ｿ繧､繝 繝√ぉ繝�繧ｫ繝ｼ"),
 		dwStyle,
 		CW_USEDEFAULT,
 		0,
