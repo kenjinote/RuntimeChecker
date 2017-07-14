@@ -14,18 +14,19 @@
     <ProjectGuid>{FCEEE308-C782-48F7-8BC1-12959EC9980C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>runtimechecker</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v140_xp</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v140_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -87,6 +88,7 @@
     <ResourceCompile Include="runtimechecker.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="res\vc2002.dll" />
     <None Include="res\vc2003.dll" />
     <None Include="res\vc2005.dll" />
     <None Include="res\vc2008.dll" />
